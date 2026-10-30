@@ -1,15 +1,8 @@
-import './App.css'
+import "./App.css";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
-
-  return (
-      <section id="center">
-        mode
-        <img src="/images/d2.png" style={{width:200}} height={100} alt="" />
-        {/* work with only ./ name of the asset in public */}
-        <img src="./images/d2.png" width={200} height={100} alt="" /> 
-        </section>
-  )
+  return <AppRoutes></AppRoutes>;
 }
 
-export default App
+export default App;
