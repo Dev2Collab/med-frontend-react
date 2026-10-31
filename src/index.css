@@ -1,1 +1,76 @@
 @import "tailwindcss";
+@import "./styles/theme.css";
+@import "./styles/style.css";
+
+@theme {
+  /* Typography */
+  --font-cairo: 'Cairo', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Cairo', system-ui, -apple-system, sans-serif;
+
+  /* Primitives: Primary Blues */
+  --color-primary-50: #F0F7FE;
+  --color-primary-100: #DCEBFB;
+  --color-primary-200: #B9D7F7;
+  --color-primary-500: #2F86DE;
+  --color-primary-600: #1670CC;
+  --color-primary-700: #0F5AAA;
+  --color-primary-800: #0D4585;
+  --color-primary-900: #0B3A66;
+
+  /* Primitives: Teal Accents */
+  --color-teal-50: #E6F7F5;
+  --color-teal-100: #C7EEE9;
+  --color-teal-500: #14B8A6;
+  --color-teal-600: #0D9488;
+  --color-teal-700: #0F766E;
+
+  /* Primitives: Neutral Slate */
+  --color-neutral-0: #FFFFFF;
+  --color-neutral-50: #F8FAFC;
+  --color-neutral-100: #F1F5F9;
+  --color-neutral-200: #E2E8F0;
+  --color-neutral-300: #CBD5E1;
+  --color-neutral-400: #94A3B8;
+  --color-neutral-500: #64748B;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1E293B;
+  --color-neutral-900: #0F172A;
+
+  /* Semantic Brand Tokens */
+  --color-brand: #1670CC;
+  --color-brand-hover: #0F5AAA;
+  --color-brand-dark: #0B3A66;
+  --color-brand-soft: #DCEBFB;
+  --color-brand-subtle: #F0F7FE;
+
+  /* Semantic Accent Tokens */
+  --color-accent: #0D9488;
+  --color-accent-hover: #0F766E;
+  --color-accent-soft: #E6F7F5;
+  --color-accent-dark: #0F766E;
+
+  /* Semantic Typography Tokens */
+  --color-heading: #0F172A;
+  --color-body: #334155;
+  --color-muted: #64748B;
+  --color-rating: #F59E0B;
+
+  /* Semantic Surface & Background Tokens */
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F8FAFC;
+  --color-page: #FFFFFF;
+
+  /* Semantic Border Tokens */
+  --color-border-default: #E2E8F0;
+  --color-border-strong: #CBD5E1;
+  --color-border-brand: #1670CC;
+
+  /* Functional / Status Tokens */
+  --color-success-bg: #DCFCE7;
+  --color-success-text: #15803D;
+  --color-warning-bg: #FEF3C7;
+  --color-warning-text: #B45309;
+  --color-danger-bg: #FEE2E2;
+  --color-danger-text: #B91C1C;
+}

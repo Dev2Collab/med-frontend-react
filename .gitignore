@@ -1,26 +1,113 @@
-# Logs
-logs
+# ==============================================================================
+# Comprehensive & Professional .gitignore for React + Vite + Node.js Project
+# ==============================================================================
+
+# 1. Dependencies & Package Managers
+node_modules/
+.pnp/
+.pnp.js
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnpm-store/
+
+# 2. Production & Build Outputs
+dist/
+dist-ssr/
+build/
+out/
+.next/
+.output/
+*.tsbuildinfo
+
+# 3. Environment Variables & Secret Credentials
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+*.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.crt
+
+# 4. Logs, Runtime & Debugging
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+*.pid
+*.seed
+*.pid.lock
 
-node_modules
-dist
-dist-ssr
-*.local
+# 5. Testing & Code Coverage
+coverage/
+.nyc_output/
+*.lcov
+.playwright/
+test-results/
+playwright-report/
 
-# Editor directories and files
+# 6. IDEs, Editors & Developer Tooling
 .vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
+*.sublime-project
+*.sublime-workspace
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.swo
+*.swp
+*~
+.project
+.classpath
+.settings/
 
-.env
+# 7. Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+ehthumbs_vista.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# 8. Bundler & Tooling Caches
+.vite/
+.cache/
+.parcel-cache/
+.turbo/
+.eslintcache
+.stylelintcache
+.prettiercache
+
+# 9. Temporary Files & Scratch
+*.tmp
+*.temp
+.temp/
+scratch/
+
+# 10. AI Agent Local Configurations & Skills (Keep Private from Git)
+agent/
+.agents/
+.gemini/
+AGENTS.md
+GEMINI.md
+

@@ -1,73 +1,139 @@
-/* src/styles/theme.css */
-
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;500;600;700;900&display=swap');
+/* src/styles/theme.css - Centralized Medical Design System Variables */
 
 :root {
-  /* الألوان الأساسية */
-  --primary-color: #1a3c34;
-  --primary-color-hover: #344f46;
-  --bg-color: #546e68;
-  --primary-text: #c5a059; 
-  --opacity-text: #1a3c3499;
-  --opacity-bg: #ffffff1a;
-  --secondary-color: #64748b;
+  /* -------------------------------------------------------------------------- */
+  /* 1. Color Primitives                                                        */
+  /* -------------------------------------------------------------------------- */
+  /* Primary Scale (Modern Medical Blues) */
+  --primary-50: #F0F7FE;
+  --primary-100: #DCEBFB;
+  --primary-200: #B9D7F7;
+  --primary-500: #2F86DE;
+  --primary-600: #1670CC;
+  --primary-700: #0F5AAA;
+  --primary-800: #0D4585;
+  --primary-900: #0B3A66;
 
-  /* ألوان الخلفيات */
-  --bg-light: #eef2ef;
-  --bg-gray: #f9faf9;
-  --white: #ffffff;
-  --dark: #0d2b1a;
-  
-  /* ألوان الحالات */
-  --danger: #f87171;
-  --success: #13ec5b;
-  --border-light: #0d2b1a1a;
-  --border-gold: #c5a05933;
-  --gold-light: #c5a0591a;
+  /* Teal Scale (Accents & Highlights) */
+  --teal-50: #E6F7F5;
+  --teal-100: #C7EEE9;
+  --teal-500: #14B8A6;
+  --teal-600: #0D9488;
+  --teal-700: #0F766E;
 
-  /* الخطوط */
-  --font-family: 'Cairo', sans-serif;
-  
-  /* الـ Spacing */
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
-  --space-2xl: 48px;
-  --space-3xl: 64px;
+  /* Neutral Slate Scale */
+  --neutral-0: #FFFFFF;
+  --neutral-50: #F8FAFC;
+  --neutral-100: #F1F5F9;
+  --neutral-200: #E2E8F0;
+  --neutral-300: #CBD5E1;
+  --neutral-400: #94A3B8;
+  --neutral-500: #64748B;
+  --neutral-600: #475569;
+  --neutral-700: #334155;
+  --neutral-800: #1E293B;
+  --neutral-900: #0F172A;
 
-  /* الـ Border Radius */
-  --radius-sm: 8px;
-  --radius-md: 12px;
+  /* State & Functional Primitives */
+  --success-100: #DCFCE7;
+  --success-600: #15803D;
+  --warning-100: #FEF3C7;
+  --warning-600: #B45309;
+  --danger-100: #FEE2E2;
+  --danger-600: #B91C1C;
+  --amber-500: #F59E0B;
+
+  /* -------------------------------------------------------------------------- */
+  /* 2. Semantic Theme Tokens                                                   */
+  /* -------------------------------------------------------------------------- */
+  /* Backgrounds */
+  --bg-page: var(--neutral-0);
+  --bg-subtle: var(--primary-50);
+  --bg-muted: var(--neutral-50);
+  --bg-surface: var(--neutral-0);
+  --bg-surface-alt: var(--neutral-100);
+  --bg-brand: var(--primary-600);
+  --bg-brand-hover: var(--primary-700);
+  --bg-brand-dark: var(--primary-900);
+  --bg-brand-soft: var(--primary-100);
+  --bg-accent: var(--teal-600);
+  --bg-accent-soft: var(--teal-50);
+  --bg-success: var(--success-100);
+  --bg-warning: var(--warning-100);
+  --bg-danger: var(--danger-100);
+
+  /* Typography Colors */
+  --text-heading: var(--neutral-900);
+  --text-body: var(--neutral-700);
+  --text-muted: var(--neutral-500);
+  --text-on-brand: var(--neutral-0);
+  --text-brand: var(--primary-700);
+  --text-accent: var(--teal-700);
+  --text-success: var(--success-600);
+  --text-warning: var(--warning-600);
+  --text-danger: var(--danger-600);
+  --text-rating: var(--amber-500);
+
+  /* Borders */
+  --border-default: var(--neutral-200);
+  --border-strong: var(--neutral-300);
+  --border-brand: var(--primary-600);
+  --border-focus: var(--primary-500);
+  --border-danger: var(--danger-600);
+
+  /* Icons */
+  --icon-default: var(--neutral-500);
+  --icon-brand: var(--primary-600);
+  --icon-accent: var(--teal-700);
+  --icon-on-brand: var(--neutral-0);
+
+  /* Spacing Tokens */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-96: 96px;
+
+  /* Border Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
   --radius-lg: 16px;
   --radius-xl: 24px;
-  --radius-2xl: 40px;
-  --radius-pill: 9999px;
+  --radius-full: 9999px;
 
-  /* الظلال */
-  --shadow-card: 0px 25px 50px -12px rgba(0, 0, 0, 0.16);
-  --shadow-sm: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-}
+  /* Typography & Elevation */
+  --font-family: 'Cairo', sans-serif;
+  --shadow-card: 0px 10px 30px -5px rgba(15, 23, 42, 0.08);
+  --shadow-sm: 0px 1px 3px 0px rgba(15, 23, 42, 0.06);
 
-/*
-// tailwind.config.js
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        primary: 'var(--primary-color)',
-        gold: 'var(--primary-text)',
-        bg: 'var(--bg-color)',
-        // ... إلخ
-      },
-      fontFamily: {
-        cairo: ['Cairo', 'sans-serif'],
-      },
-      borderRadius: {
-        'xl': 'var(--radius-xl)',
-      }
-    }
-  }
+  /* Standardized Tailwind Theme Aliases */
+  --color-brand: var(--primary-600);
+  --color-brand-hover: var(--primary-700);
+  --color-brand-dark: var(--primary-900);
+  --color-brand-soft: var(--primary-100);
+  --color-brand-subtle: var(--primary-50);
+
+  --color-accent: var(--teal-600);
+  --color-accent-hover: var(--teal-700);
+  --color-accent-soft: var(--teal-50);
+  --color-accent-dark: var(--teal-700);
+
+  --color-heading: var(--neutral-900);
+  --color-body: var(--neutral-700);
+  --color-muted: var(--neutral-500);
+  --color-rating: var(--amber-500);
+
+  /* Aliases for Global Accessibility */
+  --primary-color: var(--primary-600);
+  --primary-color-hover: var(--primary-700);
+  --primary-text: var(--primary-600);
+  --white: var(--neutral-0);
+  --dark: var(--neutral-900);
 }
-*/

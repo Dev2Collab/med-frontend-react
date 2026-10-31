@@ -1,13 +1,13 @@
-/* src/styles/styles.css */
-@import './theme.css';
+/* src/styles/style.css - Component styles and layout utilities */
 
 body {
   font-family: var(--font-family);
-  background-color: var(--white);
-  color: var(--primary-color);
+  background-color: var(--bg-page);
+  color: var(--text-body);
   margin: 0;
   padding: 0;
   direction: rtl; 
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -15,87 +15,84 @@ a {
   color: inherit;
 }
 
-   /* Typography (النصوص) */
-h1 {
-  font-weight: 900;
-  font-size: 60px;
-  line-height: 60px;
-  color: var(--primary-color);
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  margin: 0;
 }
 
-h1 span {
-  color: var(--primary-text);
-}
-
-h2 {
-  font-weight: 900;
-  font-size: 36px;
-  color: var(--primary-color);
-}
-
-.text-primary { color: var(--primary-color) !important; font-weight: 900 !important; }
-.text-secondary { color: var(--bg-color); font-size: 16px; line-height: 1.6; }
-.text-gold { color: var(--primary-text); font-weight: 700; text-transform: uppercase; }
-.text-muted { color: var(--secondary-color); }
-
-   /* Buttons (الأزرار) */
+/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   cursor: pointer;
   font-family: var(--font-family);
   border: none;
-  transition: all 0.3s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
-  color: var(--primary-text);
-  padding: 12px 24px;
-  border-radius: var(--radius-lg);
-  font-weight: 900;
-  font-size: 18px;
+  background-color: var(--bg-brand);
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 15px;
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-color-hover);
+  background-color: var(--bg-brand-hover);
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
-  background-color: var(--white);
-  color: var(--primary-color);
-  border: 1px solid var(--border-gold);
-  padding: 12px 24px;
-  border-radius: var(--radius-lg);
+  background-color: var(--bg-surface);
+  color: var(--text-heading);
+  border: 1px solid var(--border-default);
+  padding: 10px 24px;
+  border-radius: var(--radius-md);
   font-weight: 700;
 }
 
-.btn-gold {
-  background-color: var(--gold-light);
-  border: 1px solid var(--border-gold);
-  color: #a6813e;
-  padding: 6px 16px;
-  border-radius: var(--radius-pill);
-  font-weight: 500;
-  backdrop-filter: blur(4px);
+.btn-secondary:hover {
+  background-color: var(--bg-muted);
+  border-color: var(--border-strong);
+}
+
+.btn-accent {
+  background-color: var(--bg-accent);
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+}
+
+.btn-accent:hover {
+  background-color: var(--color-teal-700);
 }
 
 .btn-link {
-  color: var(--primary-text);
+  background: transparent;
+  color: var(--text-brand);
+  padding: 8px 12px;
   font-weight: 700;
-  text-decoration: none;
-  background: none;
-  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
-   /* Inputs (حقول الإدخال) */
+.btn-link:hover {
+  color: var(--color-brand-hover);
+}
+
+/* Inputs */
 .form-label {
-  color: var(--opacity-text);
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.6px;
-  margin-bottom: var(--space-xs);
+  color: var(--text-heading);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: var(--space-8);
   display: block;
   text-align: right;
 }
@@ -104,147 +101,84 @@ h2 {
   width: 100%;
   padding: 12px 16px;
   border-radius: var(--radius-md);
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-default);
   font-family: var(--font-family);
-  font-size: 16px;
-  background-color: var(--white);
-  color: var(--primary-color);
+  font-size: 15px;
+  background-color: var(--bg-surface);
+  color: var(--text-heading);
   outline: none;
-  transition: border-color 0.2s;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
 }
 
 .form-control:focus {
-  border-color: var(--primary-text);
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(47, 134, 222, 0.15);
 }
 
 .form-control::placeholder {
-  color: var(--secondary-color);
+  color: var(--text-muted);
 }
 
-   /* Cards (الكروت) */
+/* Cards */
 .card {
-  background-color: var(--white);
-  border: 1px solid var(--border-gold);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-sm);
   overflow: hidden;
 }
 
-.card-body {
-  padding: var(--space-lg);
-}
-
-/* الكارت الذهبي الشفاف */
 .overlay-card {
-  border: 1px solid var(--border-gold);
-  background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
   border-radius: var(--radius-lg);
-  padding: 41px;
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
-/* الكارت الرمادي */
+.overlay-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(15, 23, 42, 0.12);
+  border-color: var(--border-brand);
+}
+
 .gray-card {
-  border: 1px solid #d1dcd5;
-  border-radius: var(--radius-md);
-  padding: var(--space-md);
-  background-color: var(--white);
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
 }
 
-   /* Layout Utilities (أدوات التنسيق) */
+/* Layout Utilities */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 0 var(--space-md);
+  padding: 0 16px;
 }
 
-.flex { display: flex; }
-.flex-col { flex-direction: column; }
-.flex-row-reverse { flex-direction: row-reverse; }
-.items-center { align-items: center; }
-.justify-between { justify-content: space-between; }
-.justify-center { justify-content: center; }
-.gap-sm { gap: var(--space-sm); }
-.gap-md { gap: var(--space-md); }
-.gap-lg { gap: var(--space-lg); }
-
-/* الـ Grid */
-.grid { display: grid; }
-.grid-2 { grid-template-columns: repeat(2, 1fr); }
-.grid-3 { grid-template-columns: repeat(3, 1fr); }
-.grid-4 { grid-template-columns: repeat(4, 1fr); }
-
-   /* Header & Navigation (الهيدر والتنقل) */
 .header {
-  height: 65px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--border-gold);
-  padding: 0 var(--space-md);
-  background-color: var(--white);
+  min-height: 72px;
 }
 
-.nav-list {
-  display: flex;
-  gap: var(--space-xl);
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Swiper Custom Pagination Bullets */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: var(--neutral-300, #CBD5E1) !important;
+  opacity: 0.6 !important;
+  border-radius: 9999px !important;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  cursor: pointer;
+  margin: 0 4px !important;
 }
 
-.nav-link {
-  color: var(--primary-color);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.nav-link.active {
-  color: var(--primary-text);
-}
-
-   /* Footer (الفوتر) */
-.footer {
-  background-color: var(--primary-color);
-  color: var(--text-light);
-  padding: 80px 0 40px;
-  margin-top: 80px;
-}
-
-.footer-box {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-lg);
-}
-
-.footer-head-line {
-  color: var(--primary-text);
-  font-weight: 900;
-  font-size: 24px;
-  margin-bottom: var(--space-md);
-}
-
-.footer-p-text {
-  color: #cbd5e1;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-   /* Responsive (للموبايل) */
-@media (max-width: 768px) {
-  h1 { font-size: 32px; line-height: 40px; }
-  h2 { font-size: 24px; }
-  
-  .grid-2, .grid-3, .grid-4 {
-    grid-template-columns: 1fr;
-  }
-  
-  .nav-list {
-    display: none; 
-  }
-  
-  .footer-box {
-    grid-template-columns: 1fr;
-  }
+.swiper-pagination-bullet-active {
+  width: 28px !important;
+  background: var(--color-brand, #1670CC) !important;
+  opacity: 1 !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 2px 8px rgba(22, 112, 204, 0.35);
 }
