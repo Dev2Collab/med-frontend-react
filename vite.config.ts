@@ -1,8 +1,20 @@
-import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite';
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  base:"./"
-})
+  plugins: [tailwindcss(), react()],
+  base: './',
+  build: {
+    chunkSizeWarningLimit: 600,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-motion': ['framer-motion'],
+          'vendor-icons': ['react-icons'],
+        },
+      },
+    },
+  },
+});

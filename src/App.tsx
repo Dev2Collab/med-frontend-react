@@ -1,15 +1,12 @@
-import './App.css'
+import { BrowserRouter } from 'react-router-dom';
+import { AppRoutes } from './routes';
 
-function App() {
-
+export function App() {
   return (
-      <section id="center">
-        mode
-        <img src="/images/d2.png" style={{width:200}} height={100} alt="" />
-        {/* work with only ./ name of the asset in public */}
-        <img src="./images/d2.png" width={200} height={100} alt="" /> 
-        </section>
-  )
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
