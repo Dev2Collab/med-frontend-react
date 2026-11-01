@@ -67,43 +67,4 @@ playwright-report/
 *.njsproj
 *.sln
 *.sw?
-*.swo
-*.swp
-*~
-.project
-.classpath
-.settings/
-
-# 7. Operating System Files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-ehthumbs_vista.db
-Thumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-
-# 8. Bundler & Tooling Caches
-.vite/
-.cache/
-.parcel-cache/
-.turbo/
-.eslintcache
-.stylelintcache
-.prettiercache
-
-# 9. Temporary Files & Scratch
-*.tmp
-*.temp
-.temp/
-scratch/
-
-# 10. AI Agent Local Configurations & Skills (Keep Private from Git)
-agent/
-.agents/
-.gemini/
-AGENTS.md
-GEMINI.md
+.env
