@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { ROUTES } from '../../../../constants/navigation';
 import { Button } from '../../../ui/Button';
 

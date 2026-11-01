@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { ROUTES, CLINIC_INFO } from '../../../constants/navigation';
 import { DesktopNav, DesktopActions } from './desktop';
 import { MobileMenuButton, MobileDrawer } from './mobile';

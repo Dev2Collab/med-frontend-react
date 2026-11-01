@@ -1,15 +1,15 @@
 import { lazy, Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router';
 import { MainLayout } from '../components/common/Layout';
 import { PageLoader } from '../components/common/PageLoader';
 import { ROUTES } from '../constants/navigation';
 
-const HomePage = lazy(() => import('../pages/Home').then((m) => ({ default: m.HomePage })));
-const DoctorsPage = lazy(() => import('../pages/Doctors').then((m) => ({ default: m.DoctorsPage })));
-const ServicesPage = lazy(() => import('../pages/Services').then((m) => ({ default: m.ServicesPage })));
-const AppointmentsPage = lazy(() => import('../pages/Appointments').then((m) => ({ default: m.AppointmentsPage })));
-const ContactPage = lazy(() => import('../pages/Contact').then((m) => ({ default: m.ContactPage })));
-const AboutPage = lazy(() => import('../pages/About').then((m) => ({ default: m.AboutPage })));
+const HomePage = lazy(() => import('../feature/Home').then((m) => ({ default: m.HomePage })));
+const DoctorsPage = lazy(() => import('../feature/Doctors').then((m) => ({ default: m.DoctorsPage })));
+const ServicesPage = lazy(() => import('../feature/Services').then((m) => ({ default: m.ServicesPage })));
+const AppointmentsPage = lazy(() => import('../feature/Appointments').then((m) => ({ default: m.AppointmentsPage })));
+const ContactPage = lazy(() => import('../feature/Contact').then((m) => ({ default: m.ContactPage })));
+const AboutPage = lazy(() => import('../feature/About').then((m) => ({ default: m.AboutPage })));
 const NotFoundPage = lazy(() => import('../pages/NotFound').then((m) => ({ default: m.NotFoundPage })));
 
 export function AppRoutes() {

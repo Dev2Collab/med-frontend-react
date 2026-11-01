@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router';
 import { DOCTORS } from '../../../services/doctorsData';
 
 export interface BookingFormData {

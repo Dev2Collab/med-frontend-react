@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { FaPhoneVolume, FaWhatsapp } from 'react-icons/fa6';
 import { ROUTES, CLINIC_INFO } from '../../../../constants/navigation';
 import { Button } from '../../../ui/Button';
