@@ -19,6 +19,12 @@ export async function getSomething(): Promise<Something | undefined> {
     const res = await api.get<Something>("/");
     return res.data;
   } catch (err) {
-    console.log(err.response.data || err.message);
+    if (axios.isAxiosError(err)) {
+      console.error(err.response?.data ?? err.message);
+    } else if (err instanceof Error) {
+      console.error(err.message);
+    } else {
+      console.error(err);
+    }
   }
 }
