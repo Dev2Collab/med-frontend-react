@@ -67,4 +67,4 @@ playwright-report/
 *.njsproj
 *.sln
 *.sw?
-.env
+
