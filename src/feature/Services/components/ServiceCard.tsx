@@ -23,7 +23,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
               alt={service.title}
               className="w-full h-full object-contain"
               onError={(e) => {
-                e.currentTarget.src = './images/default.png';
+                e.currentTarget.src = './public/images/default.png';
               }}
             />
           </div>

@@ -7,19 +7,19 @@ const DEPARTMENTS = [
     id: 'maternity',
     title: 'رعاية الأمومة والطفولة',
     description: 'متابعة دقيقة لمراحل الحمل والولادة بأعلى معايير الأمان والرعاية الطبية المتكاملة للأم والجنين.',
-    image: './images/consultation_service.jpg',
+    image: './public/images/consultation_service.jpg',
   },
   {
     id: 'rehab',
     title: 'مركز التأهيل الطبي',
     description: 'أحدث تقنيات العلاج الطبيعي واستعادة الحركة والنشاط بعد الإصابات الرياضية والعمليات الجراحية.',
-    image: './images/rehab_service.jpg',
+    image: './public/images/rehab_service.jpg',
   },
   {
     id: 'digital-lab',
     title: 'المختبر الرقمي المتطور',
     description: 'نتائج تحاليل فورية ودقيقة وموثوقة لدعم قرارات الأطباء التشخيصية السليمة بكفاءة ومصداقية عالية.',
-    image: './images/lab_service.jpg',
+    image: './public/images/lab_service.jpg',
   },
 ];
 
@@ -64,7 +64,7 @@ export function SpecializedDepartments() {
                   alt={dept.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   onError={(e) => {
-                    e.currentTarget.src = './images/default.png';
+                    e.currentTarget.src = './public/images/default.png';
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>

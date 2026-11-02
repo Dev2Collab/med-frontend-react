@@ -67,9 +67,9 @@ export function HeroSection() {
               {/* Overlapping User Avatars */}
               <div className="flex -space-x-3 space-x-reverse">
                 {[
-                  { src: './images/user1.png', alt: 'مريض سعيد' },
-                  { src: './images/user2.png', alt: 'مريض سعيد' },
-                  { src: './images/user3.png', alt: 'مريض سعيد' },
+                  { src: './public/images/user1.png', alt: 'مريض سعيد' },
+                  { src: './public/images/user2.png', alt: 'مريض سعيد' },
+                  { src: './public/images/user3.png', alt: 'مريض سعيد' },
                 ].map((user, idx) => (
                   <motion.img
                     key={idx}
