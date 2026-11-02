@@ -105,7 +105,7 @@ export function DoctorProfileModal({
                   alt={doctor.name}
                   className="w-full h-full object-cover object-top"
                   onError={(e) => {
-                    e.currentTarget.src = '/images/Doctor avatar.png';
+                    e.currentTarget.src = './images/Doctor avatar.png';
                   }}
                 />
               </div>

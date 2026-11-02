@@ -32,7 +32,7 @@ export function DoctorCard({ doctor, onViewProfile }: DoctorCardProps) {
           alt={doctor.name}
           className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
           onError={(e) => {
-            e.currentTarget.src = '/images/Doctor avatar.png';
+            e.currentTarget.src = './images/Doctor avatar.png';
             e.currentTarget.onerror = null;
           }}
         />

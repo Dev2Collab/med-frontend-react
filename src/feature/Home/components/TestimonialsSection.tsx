@@ -26,7 +26,7 @@ const TESTIMONIALS: Testimonial[] = [
     role: 'مريض مراجع - استشارات باطنية',
     rating: 5,
     comment: 'تجربة ممتازة جداً، الطاقم الطبي متعاون والتعامل راقي، والاهتمام من حيث دقة المواعيد والنظافة العامة للعيادة، أنصح بها بشدة.',
-    avatar: '/images/user1.png',
+    avatar: './images/user1.png',
   },
   {
     id: '2',
@@ -34,7 +34,7 @@ const TESTIMONIALS: Testimonial[] = [
     role: 'مريضة سابقة - متابعة دورية',
     rating: 5,
     comment: 'الدكتورة كان شرحها جيد وواضح لي في أدق التفاصيل، شعرت براحة كبيرة وثقة في خطة العلاج. شكراً لكم على هذا المستوى الرائع.',
-    avatar: '/images/user2.png',
+    avatar: './images/user2.png',
   },
   {
     id: '3',
@@ -42,7 +42,7 @@ const TESTIMONIALS: Testimonial[] = [
     role: 'مريض مراجع - فحص شامل',
     rating: 5,
     comment: 'المكان مرتب والخدمة سريعة، ميزة التذكير بالمواعيد ساعدتني على تنظيم زيارتي، أتمنى لكم التوفيق والاستمرار بهذا التميز.',
-    avatar: '/images/user3.png',
+    avatar: './images/user3.png',
   },
   {
     id: '4',
@@ -50,7 +50,7 @@ const TESTIMONIALS: Testimonial[] = [
     role: 'مراجعة - عيادة الأسرة',
     rating: 5,
     comment: 'الاهتمام بالمريض منذ لحظة الدخول وحتى انتهاء الزيارة استثنائي. دقة في التحاليل وسرعة في استلام النتائج عبر النظام.',
-    avatar: '/images/user2.png',
+    avatar: './images/user2.png',
   },
   {
     id: '5',
@@ -58,7 +58,7 @@ const TESTIMONIALS: Testimonial[] = [
     role: 'مريض مراجع - تأهيل وعلاج طبيعي',
     rating: 5,
     comment: 'أشكر الدكتور المشرف على برنامج التأهيل، تحسنت حالتي بشكل ملحوظ في وقت قياسي بفضل التمارين والمتابعة الأسبوعية الدقيقة.',
-    avatar: '/images/user1.png',
+    avatar: './images/user1.png',
   },
   {
     id: '6',
@@ -66,7 +66,7 @@ const TESTIMONIALS: Testimonial[] = [
     role: 'مراجعة - باقة الفحص الدوري',
     rating: 5,
     comment: 'عيادة متكاملة وأجهزة حديثة جداً. تجربة مريحة بدون انتظار طويل وفريق تمريض على أعلى مستوى من الاحترافية.',
-    avatar: '/images/user3.png',
+    avatar: './images/user3.png',
   },
 ];
 
