@@ -1,4 +1,5 @@
 import { Doctor } from '../types';
+import { publicAsset } from '../utils/publicAsset';
 
 export const DOCTORS: Doctor[] = [
   {
@@ -9,7 +10,7 @@ export const DOCTORS: Doctor[] = [
     experience: '15 عاماً',
     rating: 4.9,
     reviewsCount: 142,
-    image: './public/images/doc1.png',
+    image: publicAsset('images/doc1.png'),
     bio: 'متخصص في القسطرة الدقيقة وتشخيص وعلاج أمراض القلب والشرايين التاجية بأحدث التقنيات الطبية.',
     availableDays: ['السبت', 'الإثنين', 'الأربعاء'],
   },
@@ -21,7 +22,7 @@ export const DOCTORS: Doctor[] = [
     experience: '10 أعوام',
     rating: 4.8,
     reviewsCount: 118,
-    image: './public/images/doc2.png',
+    image: publicAsset('images/doc2.png'),
     bio: 'خبرة واسعة في الحقن التجميلي، الليزر، وعلاج الأمراض الجلدية المزمنة وتجديد نضارة البشرة.',
     availableDays: ['الأحد', 'الثلاثاء', 'الخميس'],
   },
@@ -33,7 +34,7 @@ export const DOCTORS: Doctor[] = [
     experience: '12 عاماً',
     rating: 5.0,
     reviewsCount: 189,
-    image: './public/images/doc3.png',
+    image: publicAsset('images/doc3.png'),
     bio: 'متخصص في العناية بحديثي الولادة، متابعة النمو السليم، وتشخيص وعلاج أمراض الطفولة المعقدة.',
     availableDays: ['السبت', 'الثلاثاء', 'الخميس'],
   },
@@ -45,7 +46,7 @@ export const DOCTORS: Doctor[] = [
     experience: '8 أعوام',
     rating: 4.7,
     reviewsCount: 95,
-    image: './public/images/doc4.png',
+    image: publicAsset('images/doc4.png'),
     bio: 'رعاية وقائية شاملة لكافة أفراد الأسرة، ومتابعة الأمراض المزمنة مثل السكري وضغط الدم بدقة.',
     availableDays: ['يومياً ما عدا الجمعة'],
   },
@@ -57,7 +58,7 @@ export const DOCTORS: Doctor[] = [
     experience: '14 عاماً',
     rating: 4.9,
     reviewsCount: 160,
-    image: './public/images/d1.png',
+    image: publicAsset('images/d1.png'),
     bio: 'خبير زراعة وتجميل الأسنان وابتسامة هوليوود، وعلاج جذور الأسنان بأحدث أجهزة الميكروسكوب.',
     availableDays: ['السبت', 'الأحد', 'الأربعاء'],
   },
@@ -69,7 +70,7 @@ export const DOCTORS: Doctor[] = [
     experience: '16 عاماً',
     rating: 4.8,
     reviewsCount: 130,
-    image: './public/images/d3.png',
+    image: publicAsset('images/d3.png'),
     bio: 'علاج الدوالي بالقسطرة والتردد الحراري وعلاج أمراض الشرايين الطرفية والجلطات.',
     availableDays: ['الإثنين', 'الأربعاء'],
   },

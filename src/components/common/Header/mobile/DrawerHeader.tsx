@@ -1,5 +1,6 @@
 import { FaXmark } from 'react-icons/fa6';
 import { CLINIC_INFO } from '../../../../constants/navigation';
+import { publicAsset } from '../../../../utils/publicAsset';
 
 export interface DrawerHeaderProps {
   onClose: () => void;
@@ -21,7 +22,7 @@ export function DrawerHeader({ onClose }: DrawerHeaderProps) {
     >
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
         <img
-          src="/logo/logo.png"
+          src={publicAsset('logo/logo.png')}
           alt={CLINIC_INFO.name}
           style={{ width: 40, height: 40, objectFit: 'contain' }}
         />
@@ -77,4 +78,3 @@ export function DrawerHeader({ onClose }: DrawerHeaderProps) {
 }
 
 export default DrawerHeader;
-

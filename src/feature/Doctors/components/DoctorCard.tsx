@@ -3,6 +3,7 @@ import { FaStar, FaArrowLeftLong, FaRegIdBadge } from 'react-icons/fa6';
 import { Button } from '../../../components/ui/Button';
 import { ROUTES } from '../../../constants/navigation';
 import { Doctor } from '../../../types';
+import { publicAsset } from '../../../utils/publicAsset';
 
 export interface DoctorCardProps {
   doctor: Doctor;
@@ -32,7 +33,7 @@ export function DoctorCard({ doctor, onViewProfile }: DoctorCardProps) {
           alt={doctor.name}
           className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
           onError={(e) => {
-            e.currentTarget.src = './public/images/Doctor avatar.png';
+            e.currentTarget.src = publicAsset('images/Doctor avatar.png');
             e.currentTarget.onerror = null;
           }}
         />

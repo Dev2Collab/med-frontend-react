@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaStar } from 'react-icons/fa6';
 import { Button } from '../../../components/ui/Button';
 import { ROUTES } from '../../../constants/navigation';
+import { publicAsset } from '../../../utils/publicAsset';
 
 export function HeroSection() {
   const navigate = useNavigate();
@@ -67,9 +68,9 @@ export function HeroSection() {
               {/* Overlapping User Avatars */}
               <div className="flex -space-x-3 space-x-reverse">
                 {[
-                  { src: './public/images/user1.png', alt: 'مريض سعيد' },
-                  { src: './public/images/user2.png', alt: 'مريض سعيد' },
-                  { src: './public/images/user3.png', alt: 'مريض سعيد' },
+                  { src: publicAsset('images/user1.png'), alt: 'مريض سعيد' },
+                  { src: publicAsset('images/user2.png'), alt: 'مريض سعيد' },
+                  { src: publicAsset('images/user3.png'), alt: 'مريض سعيد' },
                 ].map((user, idx) => (
                   <motion.img
                     key={idx}
@@ -111,7 +112,7 @@ export function HeroSection() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border-default max-w-lg lg:max-w-none mx-auto group">
               <img
-                src="/images/Modern clinic interior.png"
+                src={publicAsset('images/Modern clinic interior.png')}
                 alt="غرفة الكشف في عيادة الشفاء"
                 className="w-full h-[380px] md:h-[440px] object-cover group-hover:scale-105 transition-transform duration-700"
               />

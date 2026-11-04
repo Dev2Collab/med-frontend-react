@@ -5,6 +5,7 @@ import { Button } from '../../../components/ui/Button';
 import { Badge } from '../../../components/ui/Badge';
 import { ROUTES } from '../../../constants/navigation';
 import { Service } from '../../../types';
+import { publicAsset } from '../../../utils/publicAsset';
 
 export interface ServiceCardProps {
   service: Service;
@@ -23,7 +24,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
               alt={service.title}
               className="w-full h-full object-contain"
               onError={(e) => {
-                e.currentTarget.src = './public/images/default.png';
+                e.currentTarget.src = publicAsset('images/default.png');
               }}
             />
           </div>

@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router';
 import { Button } from '../../components/ui/Button';
 import { ROUTES } from '../../constants/navigation';
 import { usePageTitle } from '../../hooks/usePageTitle';
+import { publicAsset } from '../../utils/publicAsset';
 
 export function NotFoundPage() {
   usePageTitle('الصفحة غير موجودة');
@@ -11,7 +12,7 @@ export function NotFoundPage() {
     <div className="py-24 bg-white text-center">
       <div className="container mx-auto px-4 max-w-lg space-y-6">
         <img
-          src="/images/error.png"
+          src={publicAsset('images/error.png')}
           alt="صفحة غير موجودة"
           className="w-48 h-48 mx-auto object-contain"
         />

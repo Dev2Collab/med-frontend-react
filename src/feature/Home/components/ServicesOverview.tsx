@@ -16,6 +16,7 @@ import {
   FaChevronLeft,
 } from 'react-icons/fa6';
 import { ROUTES } from '../../../constants/navigation';
+import { publicAsset } from '../../../utils/publicAsset';
 
 // Swiper base styles
 import 'swiper/css';
@@ -35,42 +36,42 @@ const HOME_SERVICES: ServiceItem[] = [
     id: 'consultations',
     title: 'الاستشارات الطبية التخصصية',
     description: 'احصل على تشخيص دقيق وخطة علاجية مخصصة لحالتك من قبل نخبة من الاستشاريين في كافة التخصصات الطبية.',
-    image: './public/images/doc1.png',
+    image: publicAsset('images/doc1.png'),
     icon: <FaUserDoctor className="w-4 h-4 text-brand-soft" />,
   },
   {
     id: 'procedures',
     title: 'الفحوصات والتحاليل المخبرية',
     description: 'أحدث أجهزة التحاليل المخبرية والأشعة التشخيصية لضمان دقة وسرعة ظهور النتائج والفحوصات الطبية.',
-    image: './public/images/Medical lab test.png',
+    image: publicAsset('images/Medical lab test.png'),
     icon: <FaMicroscope className="w-4 h-4 text-brand-soft" />,
   },
   {
     id: 'checkups',
     title: 'الفحص الدوري الشامل',
     description: 'باقات فحص دوري متكاملة للأفراد والعائلات للكشف المبكر والوقاية وضمان راحة البال المستمرة.',
-    image: './public/images/Periodic checkup.png',
+    image: publicAsset('images/Periodic checkup.png'),
     icon: <FaHeartPulse className="w-4 h-4 text-brand-soft" />,
   },
   {
     id: 'treatment-programs',
     title: 'برامج العلاج والتأهيل',
     description: 'خطط علاجية وتأهيلية محكمة تضمن التعافي السريع بإشراف طبي ومتابعة مستمرة خطوة بخطوة.',
-    image: './public/images/Rehabilitation therapy.png',
+    image: publicAsset('images/Rehabilitation therapy.png'),
     icon: <FaDna className="w-4 h-4 text-brand-soft" />,
   },
   {
     id: 'family-medicine',
     title: 'طب الأسرة والوقاية',
     description: 'رعاية صحية أولية شاملة لجميع أفراد الأسرة بمختلف الأعمار للوقاية وإدارة الحالات الصحية.',
-    image: './public/images/Doctor consultation.png',
+    image: publicAsset('images/Doctor consultation.png'),
     icon: <FaStethoscope className="w-4 h-4 text-brand-soft" />,
   },
   {
     id: 'urgent-care',
     title: 'الرعاية الطبية السريعة',
     description: 'جاهزية عالية للتعامل مع الحالات الطبية الطارئة وغير المجدولة بأعلى معايير السلامة والجودة.',
-    image: './public/images/Modern clinic interior.png',
+    image: publicAsset('images/Modern clinic interior.png'),
     icon: <FaKitMedical className="w-4 h-4 text-brand-soft" />,
   },
 ];

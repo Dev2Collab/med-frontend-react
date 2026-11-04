@@ -13,6 +13,7 @@ import {
 import { Doctor } from '../../../types';
 import { ROUTES } from '../../../constants/navigation';
 import { Button } from '../../../components/ui/Button';
+import { publicAsset } from '../../../utils/publicAsset';
 
 export interface DoctorProfileModalProps {
   doctor: Doctor | null;
@@ -105,7 +106,7 @@ export function DoctorProfileModal({
                   alt={doctor.name}
                   className="w-full h-full object-cover object-top"
                   onError={(e) => {
-                    e.currentTarget.src = './public/images/Doctor avatar.png';
+                    e.currentTarget.src = publicAsset('images/Doctor avatar.png');
                   }}
                 />
               </div>

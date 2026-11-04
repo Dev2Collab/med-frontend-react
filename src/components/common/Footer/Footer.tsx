@@ -8,6 +8,7 @@ import {
   FaInstagram,
 } from 'react-icons/fa6';
 import { CLINIC_INFO, ROUTES } from '../../../constants/navigation';
+import { publicAsset } from '../../../utils/publicAsset';
 import { InteractiveMap } from '../InteractiveMap';
 
 export function Footer() {
@@ -20,7 +21,7 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <div className="w-11 h-11 rounded-2xl bg-white p-1.5 flex items-center justify-center shadow-md shrink-0">
                 <img
-                  src="/logo/logo.png"
+                  src={publicAsset('logo/logo.png')}
                   alt={CLINIC_INFO.name}
                   className="w-full h-full object-contain"
                 />

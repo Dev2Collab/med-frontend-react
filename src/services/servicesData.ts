@@ -1,4 +1,5 @@
 import { Service } from '../types';
+import { publicAsset } from '../utils/publicAsset';
 
 export const SERVICES: Service[] = [
   {
@@ -6,7 +7,7 @@ export const SERVICES: Service[] = [
     title: 'الاستشارات الطبية التخصصية',
     subtitle: 'نخبة من كبار الاستشاريين في كافة التخصصات الدقيقة',
     description: 'جلسات استشارية تشخيصية شاملة مع أحدث تقنيات الفحص السريري وخطط علاجية مخصصة لكل مريض.',
-    iconImage: './public/images/Doctor consultation.png',
+    iconImage: publicAsset('images/Doctor consultation.png'),
     features: ['تشخيص دقيق متكامل', 'خطة علاجية مخصصة', 'متابعة دورية مستمرة'],
     category: 'العيادات الخارجية',
   },
@@ -15,7 +16,7 @@ export const SERVICES: Service[] = [
     title: 'الفحص الطبي الدوري الشامل',
     subtitle: 'باقات فحص وقائية متكاملة لجميع الفئات العمرية',
     description: 'برامج فحص دورية وقائية للكشف المبكر عن الأمراض والاطمئنان الكامل على الصحة العامة.',
-    iconImage: './public/images/Periodic checkup.png',
+    iconImage: publicAsset('images/Periodic checkup.png'),
     features: ['فحوصات دم متقدمة', 'أشعة وموجات صوتية', 'تقرير طبي شامل'],
     category: 'الطب الوقائي',
   },
@@ -24,7 +25,7 @@ export const SERVICES: Service[] = [
     title: 'المختبرات والتحاليل الطبية',
     subtitle: 'أدق أجهزة التحليل الآلي بأعلى معايير الدقة والسرعة',
     description: 'مختبرات معتمدة دولياً تعمل على مدار 24 ساعة لتقديم أدق النتائج وأسرعها عبر التطبيق الإلكتروني.',
-    iconImage: './public/images/Medical lab test.png',
+    iconImage: publicAsset('images/Medical lab test.png'),
     features: ['نتائج فورية إلكترونية', 'فحوصات الجينات والمناعة', 'سحب العينات منزلياً'],
     category: 'المختبرات',
   },
@@ -33,7 +34,7 @@ export const SERVICES: Service[] = [
     title: 'العلاج الطبيعي والتأهيل',
     subtitle: 'أحدث برامج الاستشفاء الرياضي والتأهيل الحركي',
     description: 'أقسام متطورة للعلاج الطبيعي والتأهيل بعد الجراحات والإصابات الرياضية بأحدث الأجهزة الأوروبية.',
-    iconImage: './public/images/Rehabilitation therapy.png',
+    iconImage: publicAsset('images/Rehabilitation therapy.png'),
     features: ['جلسات علاج يدوي', 'أجهزة ليزر وموجات تصادمية', 'برامج تأهيل رياضي'],
     category: 'التأهيل الصحي',
   },

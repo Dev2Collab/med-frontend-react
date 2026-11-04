@@ -1,12 +1,13 @@
 import { FaCircleCheck } from 'react-icons/fa6';
 import { CLINIC_INFO } from '../../../constants/navigation';
+import { publicAsset } from '../../../utils/publicAsset';
 
 export function BookingSummary() {
   return (
     <div className="bg-white p-8 rounded-3xl border border-[var(--border-gold)] shadow-xl space-y-6 text-right">
       <div className="flex items-center gap-3 pb-4 border-b border-gray-100">
         <img
-          src="/logo/logo.png"
+          src={publicAsset('logo/logo.png')}
           alt={CLINIC_INFO.name}
           className="w-12 h-12 object-contain"
         />

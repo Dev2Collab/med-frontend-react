@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
 import { ROUTES, CLINIC_INFO } from '../../../constants/navigation';
+import { publicAsset } from '../../../utils/publicAsset';
 import { DesktopNav, DesktopActions } from './desktop';
 import { MobileMenuButton, MobileDrawer } from './mobile';
 
@@ -14,7 +15,7 @@ export function Header() {
         {/* Brand logo */}
         <Link to={ROUTES.HOME} className="flex items-center gap-3 group py-1.5 shrink-0">
           <img
-            src="/logo/logo.png"
+            src={publicAsset('logo/logo.png')}
             alt={CLINIC_INFO.name}
             className="w-10 h-10 md:w-11 md:h-11 object-contain drop-shadow-xs group-hover:scale-105 transition-transform duration-300 shrink-0"
           />
