@@ -27,7 +27,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: lts/*
+          cache: 'npm' # 👈 دي بتسرع التثبيت
 
       - name: Install dependencies
         run: npm ci
@@ -36,12 +37,12 @@ jobs:
         run: npm run build
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5 # 👈 حدّث الإصدار
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'   
+          path: './dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
