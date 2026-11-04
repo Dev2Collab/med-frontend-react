@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   plugins: [tailwindcss(), react()],
-  base: './',
+  base: '/med-frontend-react/',
   build: {
     chunkSizeWarningLimit: 600,
     rollupOptions: {
